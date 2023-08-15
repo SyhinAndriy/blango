@@ -23,3 +23,4 @@ urlpatterns = [
     path('', blog.views.index),
     path('post/<slug>', blog.views.post_details, name="blog-post-details"),
 ]
+
