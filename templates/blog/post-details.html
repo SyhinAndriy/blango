@@ -1,29 +1,31 @@
 {% extends "base.html" %}
-{% load blog_extras %}
+{% load blog_extras cache %}
 {% block content %}
     <h2>{{ post.title }}</h2>
 
-{#    Author and publishing date of post#}
+    {#    Author and publishing date of post#}
     {% row %}
         <div class="col">
             {% include "blog/post-byline.html" %}
         </div>
     {% endrow %}
 
-{#    Post content#}
+    {#    Post content#}
     {% row %}
         <div class="col">
             {{ post.content|safe }}
         </div>
     {% endrow %}
 
-{#    Recent posts#}
+    {#    Recent posts#}
     {% row %}
         {% col %}
-            {% recent_posts post %}
+            {% cache 3600 recent_posts post %}
+                {% recent_posts post %}
+            {% endcache %}
         {% endcol %}
     {% endrow %}
 
-{#    Add and view posts comments#}
+    {#    Add and view posts comments#}
     {% include "blog/post_comments.html" %}
 {% endblock %}
