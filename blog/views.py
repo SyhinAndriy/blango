@@ -11,7 +11,9 @@ logger = logging.getLogger(__name__)
 # Create your views here.
 
 def index(request):
-    posts = Post.objects.filter(published_at__lte=timezone.now())
+    posts = (
+        Post.objects.filter(published_at__lte=timezone.now()).select_related("author")
+    )
     logger.debug(f"Got {len(posts)} posts")
     return render(request, "blog/index.html", {"posts": posts})
 
@@ -38,3 +40,8 @@ def post_details(request, slug):
         comment_form = None
 
     return render(request, "blog/post-details.html", {'post': post, 'comment_form': comment_form})
+
+
+def get_ip(request):
+  from django.http import HttpResponse
+  return HttpResponse(request.META['REMOTE_ADDR'])
