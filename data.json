@@ -1,0 +1,134 @@
+[
+  {
+    "model": "blog.comment",
+    "pk": 1,
+    "fields": {
+      "creator": 1,
+      "content": "What a great post",
+      "content_type": 8,
+      "object_id": 1,
+      "created_at": "2023-07-31T20:30:56.300Z",
+      "modified_at": "2023-07-31T20:30:56.339Z"
+    }
+  },
+  {
+    "model": "blog.comment",
+    "pk": 2,
+    "fields": {
+      "creator": 1,
+      "content": "I like myself",
+      "content_type": 4,
+      "object_id": 1,
+      "created_at": "2023-07-31T20:30:56.300Z",
+      "modified_at": "2023-07-31T20:30:56.339Z"
+    }
+  },
+  {
+    "model": "blog.comment",
+    "pk": 3,
+    "fields": {
+      "creator": 1,
+      "content": "it is very good comment",
+      "content_type": 8,
+      "object_id": 1,
+      "created_at": "2023-08-10T20:50:32.043Z",
+      "modified_at": "2023-08-10T20:50:32.043Z"
+    }
+  },
+  {
+    "model": "blog.comment",
+    "pk": 4,
+    "fields": {
+      "creator": 1,
+      "content": "new comment",
+      "content_type": 8,
+      "object_id": 3,
+      "created_at": "2023-08-15T13:13:50.589Z",
+      "modified_at": "2023-08-15T13:13:50.589Z"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 1,
+    "fields": {
+      "value": "django"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 2,
+    "fields": {
+      "value": "example"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 1,
+    "fields": {
+      "author": 1,
+      "created_at": "2023-07-31T19:00:26.132Z",
+      "modified_at": "2023-08-08T18:31:37.270Z",
+      "published_at": "2023-07-31T18:56:43Z",
+      "title": "Example Post 1",
+      "slug": "example-post-1",
+      "summary": "A short example post",
+      "content": "<p>This is example post. Here using HTML to render itself<p>",
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+      "author": 1,
+      "created_at": "2023-08-04T18:23:58.918Z",
+      "modified_at": "2023-08-04T18:23:58.918Z",
+      "published_at": "2023-08-04T18:22:48Z",
+      "title": "Test Post 2",
+      "slug": "test-post-2",
+      "summary": "It is test post 2",
+      "content": "Hello world ssdjfsfns sdfjlsjlsjdf",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+      "author": 1,
+      "created_at": "2023-08-04T18:26:11.939Z",
+      "modified_at": "2023-08-04T18:26:11.939Z",
+      "published_at": "2023-08-04T18:25:32Z",
+      "title": "Django lessons",
+      "slug": "django-lessons",
+      "summary": "Django lessons sljdlfsjldfsdf",
+      "content": "This document describes Django�s built-in template tags and filters. It is recommended that you use the automatic documentation, if available, as this will also include documentation for any custom tags or filters installed.",
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "blango_auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$Qks0WnBnM0V6enJPbk1pcmVTOXhiNg$EgDRwE4CeJ4PmTmt3yqGN7bOyYhedTdEekCAXe+cyrs",
+      "last_login": "2023-09-15T18:54:19.934Z",
+      "is_superuser": true,
+      "username": "syhin",
+      "first_name": "Andriy",
+      "last_name": "Syhin",
+      "email": "syhinandrij09@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-07-30T21:19:29Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

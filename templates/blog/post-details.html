@@ -26,6 +26,16 @@
         {% endcol %}
     {% endrow %}
 
+    {#    Author bio#}
+    {% if post.author.profile %}
+        {% row %}
+            {% col %}
+                <h4>About Author</h4>
+                <p>{{ post.author.profile.bio }}</p>
+            {% endcol %}
+        {% endrow %}
+    {% endif %}
+
     {#    Add and view posts comments#}
     {% include "blog/post_comments.html" %}
 {% endblock %}
