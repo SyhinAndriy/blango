@@ -4,6 +4,7 @@ from django.utils.html import format_html
 from blog.models import Post
 
 import logging
+
 logger = logging.getLogger(__name__)
 
 user_model = get_user_model()
@@ -42,8 +43,8 @@ def endrow():
 
 
 @register.simple_tag
-def col():
-    return format_html('<div class="col">')
+def col(extra_classes=""):
+    return format_html('<div class="col {}">', extra_classes)
 
 
 @register.simple_tag
